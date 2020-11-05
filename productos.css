@@ -85,6 +85,7 @@
 
 #show-modal{
     text-align: center;
+    line-height: 30px;
     width: 300px;
     height: 30px;
     font-size: 16px;
@@ -97,12 +98,14 @@
     bottom: 0;
     left: 0;
     right: 0;
+    text-decoration: none;
 }
 
 #show-modal:hover{
     background-color: #ffd849;
     color: brown;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .modal{
