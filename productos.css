@@ -1,0 +1,194 @@
+.sep{
+    padding-top: 120px;
+}
+.sep img{
+    margin-left: 60px;
+}
+.productos-list{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.galletas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.galletas h4{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5px;
+}
+.galletas p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    color: white;
+}
+.cockie{
+    width: 300px;
+    height: 160px;
+}
+#cockie img{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+}
+.cockie button{
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e7c445;
+    border-style: hidden;
+    color: rgb(73, 2, 2);
+}
+.cockie button:hover{
+    background-color: #ffd849;
+    color: brown;
+}
+#boton-fondo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.novisible{
+    display:none;
+    background-color:rgba(0,0,0,.5);
+    position: absolute;
+    width:300px;
+    height: 160px;
+}
+
+.extras{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(153, 9, 9);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Al pasar el mouse por encima del div mostramos el div con la
+    clase ".primero". Esta clase, tiene que estar dentro del id
+    "primero" para que pueda funcionar
+ */
+#cockie:hover .novisible {
+    display:block;
+}
+
+#show-modal{
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e7c445;
+    border-style: hidden;
+    color: rgb(73, 2, 2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#show-modal:hover{
+    background-color: #ffd849;
+    color: brown;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: tpo 0.35 ease;
+    margin-left: -250px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,1);
+    border-radius: 2px;
+    z-index: 9999999;
+}
+
+.modal h2{
+    padding: 0.5em;
+    text-align: center;
+    color: #444444;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.modal article{
+    height: 50px;
+    background: #e0c974;
+}
+
+.modal article p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3B2702;
+    text-align: center;
+}
+
+.close-modal{
+    color: #e7ac3c;
+    position: absolute;
+    top: 0.2em;
+    right: 0.375em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.modal a:hover{
+    color:#c0392b;
+}
+
+.modal:target{
+    opacity: 1;
+    top: 0;
+}
+.modal .btn-close-modal{
+    position: absolute;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 99999991;
+}
+
+.modal:target .content-modal{
+    top: 50px;
+    transition: top 0.35em ease;
+}
+
+@media (max-width: 500px){
+    .modal .content-modal{
+        width: 90%;
+        max-width: none;
+        margin-left: 0;
+        left: 5%;
+    }
+
+
+}

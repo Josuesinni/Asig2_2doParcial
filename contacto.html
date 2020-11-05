@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake n' Take| Contacto</title>
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="img/logo.png" alt="" class="logo"></a>
+        </div>
+        <nav>
+            <div id="navBar" class="articulos">
+                <div class="acBar"><a href="index.html">Inicio </a></div>
+                <div class="acBar"><a href="productos.html">Productos</a></div>
+                <div class="acBar"><a href="ubicacion.html">Dónde encontrarnos</a></div>
+                <div class="acBar"><a href="nosotros.html">Acerca de nosotros</a></div>
+                <div class="acBar"><a href="contacto.html?#contac">Contacto</a></div>
+            </div>
+        </nav>
+    </header>
+    <section class="contacto" id="contac">
+    <hr>
+        <div>
+            <h2>¿Tienes preguntas? LLamanos o visitanos</h2>
+            <img src="img/ubicacion.png" class="ubicacion">
+            <img src="img/llamada.png" class="llamada">
+            <div class="numeros">
+                <h4>Números teléfonicos</h4>
+                <p >
+                    (644) 130 6987 <br>
+                    (644) 425 3988 <br>
+                    (644) 204 1119
+                </p>
+            </div>
+            <div class="ubicaciones">
+                <h4>Nos puedes encontrar en las siguientes locaciones:</h4>
+                <p>Blvd. Tichi Muñoz #101 <br>
+                Calle Caborca #477 <br>
+                Calle Guillermo Prieto #499
+                </p>
+            </div>
+            
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="comentarios" id="comen">
+            <h2>Cuentale a la abuela</h2>
+            <h4 id="va" class="msg"></h4>
+            <img src="img/eschando.png">
+            <form id="formulario" action="#comen">
+               <textarea name="" id="txtarea" cols="30" rows="10" placeholder="Intruduce aquí tu comentario:"></textarea>
+                <br>    
+                <input type="button" id="enviar" class="btnenviar" value="Enviar" onclick="this.disabled=true; this.value= 'Enviando...'; this.form.submit(); limpiar();"/>
+            </form>
+        </div>
+    </section>
+    <embed src="audios/contacto.mp3" autostarty="true" loop="true" volume="40" width="0" height="0">
+    <div class="adhr"></div>
+    <footer>
+        <div class="trs">
+            <h4>Nuestras redes sociales</h4>
+            <div class="rs">
+                <div class="redes"><a href="https://www.facebook.com/bakeandtakegib/"><img src="img/face.png" alt=""></a></div>
+                <div class="redes"><a href="https://www.instagram.com/waftbakeandtake/?hl=es-la"><img src="img/1200px-Instagram_logo_2016.svg.webp" alt=""></a></div>
+                <div class="redes"><a href="https://twitter.com/BAKENTAKE?s=20"><img src="img/twitter.jpg" alt=""></a></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function limpiar(params) {
+            var txt=document.getElementById("txtarea").value;
+            if (txt=="") {
+                document.getElementById("va").innerHTML="Tú mensaje esta vacio";
+                document.getElementById("enviar").value="Enviar";
+                document.getElementById("enviar").disabled=false;
+            }else{
+                document.getElementById("va").innerHTML="Enviando mensaje...";
+                setTimeout('enviado()',2000);
+
+                var clase=$("#enviar").attr('class');
+                if (clase=="btnenviar"){
+                    $("#enviar").removeClass("btnenviar").addClass("btnenviado");
+                }
+                else if(clase=="btnenviado"){
+                    $("#enviar").removeClass("btnenviado").addClass("btnenviar");
+                }  
+            }
+            
+        }
+        function enviado() { 
+            document.getElementById("txtarea").value = "";
+            alert("Mensaje enviado");
+            document.getElementById("va").innerHTML="Tú mensaje a sido enviado satisfactoriamente";
+            document.getElementById("enviar").value="Enviar";
+            document.getElementById("enviar").disabled=false;
+
+            var clase=$("#enviar").attr('class');
+            if (clase=="btnenviado"){
+                $("#enviar").removeClass("btnenviado").addClass("btnenviar");
+            }
+            else if(clase=="btnenviar"){
+                $("#enviar").removeClass("btnenviar").addClass("btnenviado");
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>

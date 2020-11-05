@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #2a0e02;
+    position: fixed;
+    z-index: 10;
+}
+/*Configuración del logo*/
+.logo{
+    width:35%;
+    height: 120px;
+    float: left;
+}
+.logo img{
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 230px;
+    height: 100px;
+}
+/*Configuración de la barra de navegación*/
+nav{
+    width: 65%;
+    height: 120px;
+    float:left;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.articulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acBar {
+    float: left;
+    margin-right: 15px;
+}
+.acBar a:hover{
+    color:#ffd700;
+    transition: .1s;
+    font-size: 22px;
+}
+.acBar a{
+    color: #e7c445;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+.titulo{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(153, 9, 9);
+    margin-bottom: 20px;
+}
+footer{
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.trs{
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #e7c445;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    background-color: black;
+}
+.rs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.redes{
+    float: left;
+    margin-right: 15px;
+}
+
+footer img{
+    width: 40px;
+    transition: .2s;
+
+}
+footer img:hover{
+    width: 50px;
+    transition: .2s;
+}
